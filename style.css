@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: gray;
+    display: grid;
+    height: 100vh;
+    margin: 20px;
+    
+    grid-template-areas:
+    "nice nice powerful charisma"
+    "girly berry berry charisma"
+    ;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    grid-template-rows: 250px 250px;
+
+    gap: 10px;
+
+}
+footer,
+header,
+main,
+nav,
+aside{
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 10px;
+}
+footer{
+    background-color: red;
+    padding: 20px;
+    color: white;
+}
+header{
+    grid-area: nice;
+    background-color: rgb(60, 0, 128);
+    color: white;
+}
+main{
+    grid-area: powerful;
+    background-color: rgba(15, 15, 15, 0.932);
+    color: white;
+}
+nav{
+    grid-area: charisma;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 15px;
+}
+aside{
+    grid-area: berry;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+footer{
+    grid-area: girly;
+    background-color: white;
+    color: black;
+}
+@media(max-width: 400px) {
+    body{
+        grid-template-areas:
+        "nice powerful girly"
+        "nice girly berry"
+        "powerful berry charisma"
+        "girly charisma"
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 60px 50px;
+    }
+}
